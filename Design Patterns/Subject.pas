@@ -9,7 +9,7 @@
 
  Copyright © Erwien Saputra 2002.
 
- Purpose:   Implements ISubjet, to be used as aggregated object, being exposed
+ Purpose:   Implements ISubject, to be used as aggregated object, being exposed
             via property (delegated interface).
  History:
 -----------------------------------------------------------------------------}
@@ -19,7 +19,8 @@ unit Subject;
 
 interface
 uses
-  IntfObserver, Classes;
+  System.Classes,
+  IntfObserver;
 
 type
   //Class reference for TSubject
