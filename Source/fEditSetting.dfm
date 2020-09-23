@@ -62,6 +62,7 @@ object frmEditSetting: TfrmEditSetting
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
+        ExplicitWidth = 34
       end
       object tvLeft: TTreeView
         Left = 0
@@ -86,10 +87,16 @@ object frmEditSetting: TfrmEditSetting
         Height = 23
         ActionManager = acmKeyValue
         Caption = 'atbLeftKey'
-        ColorMap.HighlightColor = 15660791
+        ColorMap.HighlightColor = clWhite
         ColorMap.BtnSelectedColor = clBtnFace
-        ColorMap.UnusedColor = 15660791
+        ColorMap.UnusedColor = clWhite
         EdgeInner = esNone
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
         Spacing = 0
       end
     end
@@ -114,6 +121,7 @@ object frmEditSetting: TfrmEditSetting
         Font.Name = 'Tahoma'
         Font.Style = []
         ParentFont = False
+        ExplicitWidth = 42
       end
       object tvRight: TTreeView
         Left = 0
@@ -138,10 +146,16 @@ object frmEditSetting: TfrmEditSetting
         Height = 23
         ActionManager = acmKeyValue
         Caption = 'atbRightKey'
-        ColorMap.HighlightColor = 15660791
+        ColorMap.HighlightColor = clWhite
         ColorMap.BtnSelectedColor = clBtnFace
-        ColorMap.UnusedColor = 15660791
+        ColorMap.UnusedColor = clWhite
         EdgeInner = esNone
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
         Spacing = 0
       end
     end
@@ -212,10 +226,16 @@ object frmEditSetting: TfrmEditSetting
         ActionManager = acmKeyValue
         AllowHiding = False
         Caption = 'atbLeftNames'
-        ColorMap.HighlightColor = 15660791
+        ColorMap.HighlightColor = clWhite
         ColorMap.BtnSelectedColor = clBtnFace
-        ColorMap.UnusedColor = 15660791
+        ColorMap.UnusedColor = clWhite
         EdgeInner = esNone
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
         Spacing = 0
       end
     end
@@ -270,10 +290,16 @@ object frmEditSetting: TfrmEditSetting
         ActionManager = acmKeyValue
         AllowHiding = False
         Caption = 'atbRightNames'
-        ColorMap.HighlightColor = 15660791
+        ColorMap.HighlightColor = clWhite
         ColorMap.BtnSelectedColor = clBtnFace
-        ColorMap.UnusedColor = 15660791
+        ColorMap.UnusedColor = clWhite
         EdgeInner = esNone
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
         Spacing = 0
       end
     end
@@ -312,7 +338,7 @@ object frmEditSetting: TfrmEditSetting
     Left = 224
     Top = 88
     Bitmap = {
-      494C010102000400080010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010102000400040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       00000000000000000000000000000000000000000000008CBD00008CBD00008C
       BD00008CBD00008CBD00008CBD00008CBD00008CBD00008CBD00008CBD00008C
@@ -671,7 +697,7 @@ object frmEditSetting: TfrmEditSetting
     Left = 296
     Top = 168
     Bitmap = {
-      494C010106000900080010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010106000900040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

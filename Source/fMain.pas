@@ -33,7 +33,7 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, StdCtrls, ComCtrls, frmSetting, SettingCollection, Buttons, ActnList,
-  StdActns, Menus, ImgList, SettingPersistent, ExtCtrls;
+  StdActns, Menus, ImgList, SettingPersistent, ExtCtrls, System.ImageList, System.Actions;
 
 type
   TSettingManagerForm = class;

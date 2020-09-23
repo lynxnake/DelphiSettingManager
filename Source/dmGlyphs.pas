@@ -3,7 +3,7 @@ unit dmGlyphs;
 interface
 
 uses
-  SysUtils, Classes, ImgList, Controls;
+  SysUtils, Classes, ImgList, Controls, System.ImageList;
 
 type
   Tdm_Glyphs = class(TDataModule)

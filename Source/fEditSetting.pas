@@ -22,7 +22,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ExtCtrls, StdCtrls, ComCtrls, TreeViewController,
   DelphiSettingRegistry, Buttons, ImgList, ValueNamesProvider, ToolWin, ActnMan,
-  ActnCtrls, XPStyleActnCtrls, ActnList, Menus, SettingPersistent;
+  ActnCtrls, XPStyleActnCtrls, ActnList, Menus, SettingPersistent, System.Actions, System.ImageList;
 
 type
   TEditSettingProperties = class;
