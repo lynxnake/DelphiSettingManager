@@ -8,6 +8,7 @@ DCU/
 __history
 *.~*
 *.dproj.local
+*.groupproj.local
 *.projdata
 *.dsk
 
