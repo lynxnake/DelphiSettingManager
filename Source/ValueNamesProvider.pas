@@ -346,7 +346,7 @@ begin
   ValueName := Source.ValueNames [Source.SelectedIndex];
   ValueExist := FValueNames.IndexOf (ValueName) > -1;
   //Get the full path of the source key.
-  Path := IncludeTrailingBackslash (Source.GetSettingPath) +
+  Path := IncludeTrailingPathDelimiter (Source.GetSettingPath) +
           Source.RelativePath;
 
   //Use Reg to read the source and FReg will write the value.
