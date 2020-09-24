@@ -549,8 +549,9 @@ end;
 
 //This method synchronizes the list box selection.
 procedure TfrmEditSetting.SyncListBox(const ANewSelection, ATopIndex: integer);
-  procedure SetSelection (ListBox : TListBox;
-      const NamesProvider : IValueNamesProvider);
+  type TUpdateProc = reference to procedure(S: string);
+
+  procedure SetSelection(ANewSelection, ATopIndex: integer; ListBox : TListBox; AUpdateProc: TUpdateProc);
   var
     ClickEvent : TNotifyEvent;
     SelectedName : string;
@@ -572,16 +573,22 @@ procedure TfrmEditSetting.SyncListBox(const ANewSelection, ATopIndex: integer);
     if ListBox.Items.Count > ATopIndex then
       ListBox.TopIndex := ATopIndex;
 
-    //Update the NameProvider.SelectedIndex. Remember, if SelectedName is an
-    //empty string, the selected index is -1.  The value name does not exist.
-    NamesProvider.UpdateSelectedIndex(SelectedName);
+    AUpdateProc(SelectedName);
 
     //Restore the event handler.
     ListBox.OnClick := ClickEvent;
   end;
 begin
-  SetSelection (lbLeftValues, FLeftValueNamesProvider);
-  SetSelection (lbRightValues, FRightValueNamesProvider);
+  SetSelection(ANewSelection, ATopIndex, lbLeftValues,
+    procedure(S: string)
+    begin
+      FLeftValueNamesProvider.UpdateSelectedIndex(S);
+    end);
+  SetSelection(ANewSelection, ATopIndex, lbRightValues,
+    procedure(S: string)
+    begin
+      FRightValueNamesProvider.UpdateSelectedIndex(S);
+    end);
 end;
 
 //Copy value copies a value name from the SourceProvider to the TargetProvider.
