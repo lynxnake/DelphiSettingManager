@@ -574,7 +574,7 @@ procedure TfrmEditSetting.SyncListBox(const ANewSelection, ATopIndex: integer);
 
     //Update the NameProvider.SelectedIndex. Remember, if SelectedName is an
     //empty string, the selected index is -1.  The value name does not exist.
-    NamesProvider.SelectedIndex := NamesProvider.GetNameIndex (SelectedName);
+    NamesProvider.UpdateSelectedIndex(SelectedName);
 
     //Restore the event handler.
     ListBox.OnClick := ClickEvent;

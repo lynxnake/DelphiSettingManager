@@ -66,6 +66,7 @@ type
     procedure CopySelectedValue (const Source : IValueNamesProvider);
     procedure DeleteSelectedValue;
     procedure ClearSelectedValue;
+    procedure UpdateSelectedIndex(const ASelectedName: string);
 
     property RelativePath : string read GetRelativePath;
     property ValueNames : TStrings read GetValueNames;
@@ -118,6 +119,7 @@ type
     procedure CopySelectedValue (const Source : IValueNamesProvider);
     procedure DeleteSelectedValue;
     procedure ClearSelectedValue;
+    procedure UpdateSelectedIndex(const ASelectedName: string);
 
     procedure Update (const Subject : ISubject; const AIntf : IInterface = nil);
   public
@@ -309,6 +311,13 @@ begin
   else
     //The key is found and was opened. Load the value names and notify the form.
     LoadValueNames;
+end;
+
+procedure TValueNamesProvider.UpdateSelectedIndex(const ASelectedName: string);
+begin
+  //Update the SelectedIndex. Remember, if ASelectedName is an
+  //empty string, the selected index is -1.  The value name does not exist.
+  SetSelectedIndex(GetNameIndex(ASelectedName));
 end;
 
 //This method sets the setting path. Setting path is the path from '\Software'
