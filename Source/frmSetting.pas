@@ -24,7 +24,7 @@
  04/19/2005 - Fixed memory leak when creating the Edit Setting instance.
  06/18/2005 - Added support for applying template to the newly created form.
  06/22/2005 - Added GenerateNewSettingName method to generate a unique name
-              when the user clicked the New Setting button.  
+              when the user clicked the New Setting button.
 -----------------------------------------------------------------------------}
 
 unit frmSetting;
@@ -95,7 +95,14 @@ type
 
 implementation
 
-uses fNewSetting, fRenameSetting, ShellUtilities, fEditSetting, SettingTemplate, dmGlyphs;
+uses
+  dmGlyphs,
+  fEditSetting,
+  fNewSetting,
+  fRenameSetting,
+  SettingTemplate,
+  ShellUtilities,
+  System.UITypes;
 
 {$R *.dfm}
 
