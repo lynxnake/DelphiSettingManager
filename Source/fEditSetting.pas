@@ -190,8 +190,10 @@ type
 
 implementation
 
-uses
-  IntfObserver, dmGlyphs;
+uses,
+  dmGlyphs,
+  IntfObserver,
+  System.UITypes;
 
 const
   //Captions for the menus.
