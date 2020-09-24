@@ -3,7 +3,7 @@
         <ProjectGuid>{E3426579-3952-4684-88CE-53B7168E5740}</ProjectGuid>
         <MainSource>DelphiSettingManager.dpr</MainSource>
         <Base>True</Base>
-        <Config Condition="'$(Config)'==''">Release</Config>
+        <Config Condition="'$(Config)'==''">Debug</Config>
         <AppType>Application</AppType>
         <FrameworkType>VCL</FrameworkType>
         <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
