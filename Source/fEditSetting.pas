@@ -190,7 +190,7 @@ type
 
 implementation
 
-uses,
+uses
   dmGlyphs,
   IntfObserver,
   System.UITypes;
