@@ -4,23 +4,23 @@ program DelphiSettingManager;
 
 uses
   Forms,
+  DelphiSettingRegistry in 'Source\DelphiSettingRegistry.pas',
   dmGlyphs in 'Source\dmGlyphs.pas' {dm_Glyphs: TDataModule},
+  fAbout in 'Source\fAbout.pas' {frmAbout},
+  fEditSetting in 'Source\fEditSetting.pas' {frmEditSetting},
   fMain in 'Source\fMain.pas' {frmMain},
-  ShellUtilities in 'Source\ShellUtilities.pas',
-  SettingCollection in 'Source\SettingCollection.pas',
-  frmSetting in 'Source\frmSetting.pas' {frmSettingList: TFrame},
   fNewSetting in 'Source\fNewSetting.pas' {frmNewSetting},
   fRenameSetting in 'Source\fRenameSetting.pas' {frmRenameSetting},
-  LoadSaveCustomSetting in 'Source\LoadSaveCustomSetting.pas',
-  fAbout in 'Source\fAbout.pas' {frmAbout},
-  DelphiSettingRegistry in 'Source\DelphiSettingRegistry.pas',
-  TreeViewController in 'Source\TreeViewController.pas',
-  fEditSetting in 'Source\fEditSetting.pas' {frmEditSetting},
-  ValueNamesProvider in 'Source\ValueNamesProvider.pas',
+  frmSetting in 'Source\frmSetting.pas' {frmSettingList: TFrame},
   IntfObserver in 'Design Patterns\IntfObserver.pas',
-  Subject in 'Design Patterns\Subject.pas',
+  LoadSaveCustomSetting in 'Source\LoadSaveCustomSetting.pas',
+  SettingCollection in 'Source\SettingCollection.pas',
   SettingPersistent in 'Source\SettingPersistent.pas',
-  SettingTemplate in 'Source\SettingTemplate.pas';
+  SettingTemplate in 'Source\SettingTemplate.pas',
+  ShellUtilities in 'Source\ShellUtilities.pas',
+  Subject in 'Design Patterns\Subject.pas',
+  TreeViewController in 'Source\TreeViewController.pas',
+  ValueNamesProvider in 'Source\ValueNamesProvider.pas';
 
 {$R *.res}
 

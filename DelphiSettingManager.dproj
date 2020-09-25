@@ -113,18 +113,19 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <DCCReference Include="Source\DelphiSettingRegistry.pas"/>
         <DCCReference Include="Source\dmGlyphs.pas">
             <Form>dm_Glyphs</Form>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
+        <DCCReference Include="Source\fAbout.pas">
+            <Form>frmAbout</Form>
+        </DCCReference>
+        <DCCReference Include="Source\fEditSetting.pas">
+            <Form>frmEditSetting</Form>
+        </DCCReference>
         <DCCReference Include="Source\fMain.pas">
             <Form>frmMain</Form>
-        </DCCReference>
-        <DCCReference Include="Source\ShellUtilities.pas"/>
-        <DCCReference Include="Source\SettingCollection.pas"/>
-        <DCCReference Include="Source\frmSetting.pas">
-            <Form>frmSettingList</Form>
-            <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="Source\fNewSetting.pas">
             <Form>frmNewSetting</Form>
@@ -132,20 +133,23 @@
         <DCCReference Include="Source\fRenameSetting.pas">
             <Form>frmRenameSetting</Form>
         </DCCReference>
-        <DCCReference Include="Source\LoadSaveCustomSetting.pas"/>
-        <DCCReference Include="Source\fAbout.pas">
-            <Form>frmAbout</Form>
+        <DCCReference Include="Source\frmSetting.pas">
+            <Form>frmSettingList</Form>
+            <DesignClass>TFrame</DesignClass>
         </DCCReference>
-        <DCCReference Include="Source\DelphiSettingRegistry.pas"/>
-        <DCCReference Include="Source\TreeViewController.pas"/>
-        <DCCReference Include="Source\fEditSetting.pas">
-            <Form>frmEditSetting</Form>
-        </DCCReference>
-        <DCCReference Include="Source\ValueNamesProvider.pas"/>
         <DCCReference Include="Design Patterns\IntfObserver.pas"/>
-        <DCCReference Include="Design Patterns\Subject.pas"/>
+        <DCCReference Include="Source\LoadSaveCustomSetting.pas"/>
+        <DCCReference Include="Source\SettingCollection.pas"/>
         <DCCReference Include="Source\SettingPersistent.pas"/>
-        <DCCReference Include="Source\SettingTemplate.pas"/>
+        <DCCReference Include="Source\SettingTemplate.pas">
+            <Form>$R *.res</Form>
+        </DCCReference>
+        <DCCReference Include="Source\ShellUtilities.pas"/>
+        <DCCReference Include="Design Patterns\Subject.pas"/>
+        <DCCReference Include="Source\TreeViewController.pas"/>
+        <DCCReference Include="Source\ValueNamesProvider.pas">
+            <Form>$R *.res</Form>
+        </DCCReference>
         <RcItem Include="Resources\Icons\IDEs\16x16\D5.ico">
             <ResourceType>ICON</ResourceType>
             <ResourceId>2</ResourceId>
@@ -246,13 +250,7 @@
                 <Platform value="Win64">False</Platform>
             </Platforms>
             <Deployment Version="3">
-                <DeployFile LocalName="Resources\Icons\IDEs\16x16\BDS7.ico" Configuration="Debug" Class="ProjectFile">
-                    <Platform Name="Win32">
-                        <RemoteDir>.\</RemoteDir>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="Resources\Icons\IDEs\16x16\C#.ico" Configuration="Debug" Class="ProjectFile">
+                <DeployFile LocalName="Resources\Icons\IDEs\16x16\D7.ico" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
@@ -265,6 +263,12 @@
                     </Platform>
                 </DeployFile>
                 <DeployFile LocalName="C:\WINDOWS\microsoft.net\framework\v1.1.4322\system.drawing.dll" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Resources\Icons\IDEs\16x16\C#.ico" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
@@ -300,7 +304,7 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile LocalName="Resources\Icons\IDEs\16x16\D7.ico" Configuration="Debug" Class="ProjectFile">
+                <DeployFile LocalName="Resources\Icons\IDEs\16x16\BDS7.ico" Configuration="Debug" Class="ProjectFile">
                     <Platform Name="Win32">
                         <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
