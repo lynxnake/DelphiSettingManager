@@ -118,6 +118,7 @@
             <Form>dm_Glyphs</Form>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
+        <DCCReference Include="Source\Testable\DSM.GUI.Tools.pas"/>
         <DCCReference Include="Source\fAbout.pas">
             <Form>frmAbout</Form>
         </DCCReference>

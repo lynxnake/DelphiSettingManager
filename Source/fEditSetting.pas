@@ -192,6 +192,7 @@ implementation
 
 uses
   dmGlyphs,
+  DSM.GUI.Tools,
   IntfObserver,
   System.UITypes;
 
@@ -549,42 +550,13 @@ end;
 
 //This method synchronizes the list box selection.
 procedure TfrmEditSetting.SyncListBox(const ANewSelection, ATopIndex: integer);
-  type TUpdateProc = reference to procedure(S: string);
-
-  procedure SetSelection(ANewSelection, ATopIndex: integer; ListBox : TListBox; AUpdateProc: TUpdateProc);
-  var
-    ClickEvent : TNotifyEvent;
-    SelectedName : string;
-  begin
-    //Disable the event handler, otherwise it might trapped into infinite loop.
-    ClickEvent := ListBox.OnClick;
-    ListBox.OnClick := nil;
-    SelectedName := EmptyStr;
-
-    //Set the ItemIndex and get the name. The name can be an empty string. Empty
-    //string means that the selected name does not exist in the NameProvider.
-    if ListBox.Items.Count > ANewSelection then begin
-      ListBox.ItemIndex := ANewSelection;
-      SelectedName := ListBox.Items [ANewSelection];
-    end;
-
-    //Synchronizes the TopIndex. This will synchonizes not only the selection
-    //but also the item positions.
-    if ListBox.Items.Count > ATopIndex then
-      ListBox.TopIndex := ATopIndex;
-
-    AUpdateProc(SelectedName);
-
-    //Restore the event handler.
-    ListBox.OnClick := ClickEvent;
-  end;
 begin
-  SetSelection(ANewSelection, ATopIndex, lbLeftValues,
+  lbLeftValues.SetSelection(ANewSelection, ATopIndex,
     procedure(S: string)
     begin
       FLeftValueNamesProvider.UpdateSelectedIndex(S);
     end);
-  SetSelection(ANewSelection, ATopIndex, lbRightValues,
+  lbRightValues.SetSelection(ANewSelection, ATopIndex,
     procedure(S: string)
     begin
       FRightValueNamesProvider.UpdateSelectedIndex(S);

@@ -6,6 +6,7 @@ uses
   Forms,
   DelphiSettingRegistry in 'Source\DelphiSettingRegistry.pas',
   dmGlyphs in 'Source\dmGlyphs.pas' {dm_Glyphs: TDataModule},
+  DSM.GUI.Tools in 'Source\Testable\DSM.GUI.Tools.pas',
   fAbout in 'Source\fAbout.pas' {frmAbout},
   fEditSetting in 'Source\fEditSetting.pas' {frmEditSetting},
   fMain in 'Source\fMain.pas' {frmMain},
