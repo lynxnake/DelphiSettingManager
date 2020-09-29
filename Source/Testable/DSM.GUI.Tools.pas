@@ -27,7 +27,7 @@ begin
   //Disable the event handler, otherwise it might trapped into infinite loop.
   ClickEvent := OnClick;
   OnClick := nil;
-  SelectedName := '';
+  Assert(SelectedName = '');
 
   //Set the ItemIndex and get the name. The name can be an empty string. Empty
   //string means that the selected name does not exist in the NameProvider.
