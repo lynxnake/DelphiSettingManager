@@ -196,6 +196,7 @@ object frmEditSetting: TfrmEditSetting
         Font.Name = 'Courier'
         Font.Style = []
         ItemHeight = 13
+        MultiSelect = True
         ParentFont = False
         PopupMenu = popLeftValue
         TabOrder = 0
@@ -260,6 +261,7 @@ object frmEditSetting: TfrmEditSetting
         Font.Name = 'Courier'
         Font.Style = []
         ItemHeight = 13
+        MultiSelect = True
         ParentFont = False
         PopupMenu = popRightValues
         TabOrder = 0
