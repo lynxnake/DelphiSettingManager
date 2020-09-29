@@ -1,6 +1,8 @@
 
 # Delphi binaries
 DCU/
+/Tests/Win32/Debug
+/Tests/*.res
 *.exe
 *.identcache
 

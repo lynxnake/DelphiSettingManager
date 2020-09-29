@@ -6,6 +6,9 @@
         <Projects Include="DelphiSettingManager.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="Tests\Test.DSM.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -23,14 +26,23 @@
     <Target Name="DelphiSettingManager:Make">
         <MSBuild Projects="DelphiSettingManager.dproj" Targets="Make"/>
     </Target>
+    <Target Name="Test_DSM">
+        <MSBuild Projects="Tests\Test.DSM.dproj"/>
+    </Target>
+    <Target Name="Test_DSM:Clean">
+        <MSBuild Projects="Tests\Test.DSM.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Test_DSM:Make">
+        <MSBuild Projects="Tests\Test.DSM.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="DelphiSettingManager"/>
+        <CallTarget Targets="DelphiSettingManager;Test_DSM"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="DelphiSettingManager:Clean"/>
+        <CallTarget Targets="DelphiSettingManager:Clean;Test_DSM:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="DelphiSettingManager:Make"/>
+        <CallTarget Targets="DelphiSettingManager:Make;Test_DSM:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
